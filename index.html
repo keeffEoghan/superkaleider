@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Moments Designs - Superkaleider</title>
+        <link rel="stylesheet" href="./styles/main.css"/>
+    </head>
+    <body>
+        <canvas id="viewport"></canvas>
+
+        <script src="./scripts/vendor/lodash.min.js"></script>
+        <script src="./scripts/vendor/bezier-ease.js"></script>
+        <script src="./scripts/vendor/three.js"></script>
+        <script src="./scripts/vendor/gl-matrix.js"></script>
+        <script src="./scripts/vendor/dat-gui.js"></script>
+
+        <script>
+            if(!document.getElementById('viewport').toBlob) {
+                // jshint ignore: start
+                document.write('<script src="./scripts/vendor/canvas-to-blob.js"><\/script>');
+                // jshint ignore: end
+            }
+        </script>
+        <script>
+            if(!('Promise' in window)) {
+                // jshint ignore: start
+                document.write('<script src="./scripts/vendor/promise.js"><\/script>');
+                // jshint ignore: end
+            }
+        </script>
+
+        <script src="./scripts/module.js"></script>
+        <script src="./scripts/fetch.js"></script>
+
+        <script src="./scripts/app.js"></script>
+        <script src="./scripts/main.js"></script>
+    </body>
+</html>
